@@ -1,6 +1,6 @@
 import dbConnect from "../../../../../util/mongo";
 import jwt from "jsonwebtoken";
-import Account from "../../../../../models/Account";
+import Account from "../../../../../models/account";
 
 const handler = async (req, res) => {
 

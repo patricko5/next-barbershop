@@ -1,5 +1,5 @@
 import dbConnect from "../../../util/mongo";
-import Booking from "../../../models/Booking";
+import Booking from "../../../models/booking";
 import Schedule from "../../../models/Schedule";
 import Week from "../../../models/Week";
 import moment from "moment";

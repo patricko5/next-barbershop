@@ -6,7 +6,7 @@ import { TiBusinessCard } from "react-icons/ti";
 import { BsShop } from "react-icons/bs";
 import { VscCalendar } from "react-icons/vsc";
 import { ImScissors } from "react-icons/im";
-import { TfiGallery } from "react-icons/Tfi";
+import { TfiGallery } from "react-icons/tfi";
 import { useEffect } from "react";
 
 const Index = ({ children }) => {
