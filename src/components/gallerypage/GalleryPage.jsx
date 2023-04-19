@@ -9,7 +9,9 @@ const GalleryPage = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/api/gallery");
+        const { data } = await axios.get(
+          "https://next-barbershop.vercel.app//api/gallery"
+        );
         if (JSON.stringify(images) !== JSON.stringify(data)) {
           setImages(data);
         }
@@ -22,7 +24,6 @@ const GalleryPage = () => {
 
   return (
     <div className={styles.container}>
-      
       <div className={styles.imagesContainer}>
         {images.map((image) => (
           <div className={styles.imgContainer} key={image._id}>

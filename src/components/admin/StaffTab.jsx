@@ -17,7 +17,9 @@ const StaffTab = () => {
   useEffect(() => {
     const fetchStaffs = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/api/staff");
+        const { data } = await axios.get(
+          "https://next-barbershop.vercel.app//api/staff"
+        );
         setStaffs(data);
         const activeStaffData = data.filter((staff) => staff.isActive);
         const inactiveStaffData = data.filter((staff) => !staff.isActive);

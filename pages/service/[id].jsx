@@ -16,7 +16,7 @@ const Service = () => {
     const fetchService = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:3000/api/services/${id}`
+          `https://next-barbershop.vercel.app//api/services/${id}`
         );
         setSelected(data);
       } catch (err) {
@@ -32,31 +32,27 @@ const Service = () => {
 
   return (
     <div className={styles.container}>
-      
-        <div className={styles.left}>
-          
-            
-          <div className={styles.imgContainer} onClick={toggleModal}>
-          <img src={selected.img} className={styles.img} alt=""/>
-          </div>
+      <div className={styles.left}>
+        <div className={styles.imgContainer} onClick={toggleModal}>
+          <img src={selected.img} className={styles.img} alt="" />
         </div>
-      
-      <div className={styles.right}>
-        
-          <h1 className={styles.title}>{selected.serviceName}</h1>
-          <span className={styles.price}>${selected.price}</span>
-          <p className={styles.desc}>{selected.description}</p>
-          <Link href="/Services">
-          <button className={styles.btn1}>
-              Back
-            </button>
-            </Link>
       </div>
-      
+
+      <div className={styles.right}>
+        <h1 className={styles.title}>{selected.serviceName}</h1>
+        <span className={styles.price}>${selected.price}</span>
+        <p className={styles.desc}>{selected.description}</p>
+        <Link href="/Services">
+          <button className={styles.btn1}>Back</button>
+        </Link>
+      </div>
+
       {showModal && (
         <div className={styles.modal}>
-          <Image src={selected.img} alt="" width="800" height="800"/>
-          <button onClick={toggleModal} className={styles.close}>X</button>
+          <Image src={selected.img} alt="" width="800" height="800" />
+          <button onClick={toggleModal} className={styles.close}>
+            X
+          </button>
         </div>
       )}
     </div>

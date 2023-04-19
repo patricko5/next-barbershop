@@ -16,13 +16,15 @@ const Booking = () => {
   const [selectedStaff, setSelectedStaff] = useState(null);
   const [selectedStaffId, setSelectedStaffId] = useState(null);
   const [selectedTimeSlot, setSelectedTimeSlot] = useState(null);
-  
+
   const [currentStep, setCurrentStep] = useState(-1);
 
   useEffect(() => {
     const getServices = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/services/");
+        const res = await axios.get(
+          "https://next-barbershop.vercel.app//api/services/"
+        );
         setServices(res.data);
       } catch (err) {
         console.error(err);
@@ -64,23 +66,20 @@ const Booking = () => {
       )}
       {currentStep == 0 && (
         <>
-        
-        <h3 className={styles.title}>Please Select Service</h3>
-        <div className={styles.service_container}>
-          
-          <div className={styles.service_wrapper}>
-
-            {services.map((service) => (
-              <ServiceCard
-                service={service}
-                key={service._id}
-                onSelectService={setSelectedService}
-              />
-            ))}
-          </div>
-          <button onClick={handleSelectService} className={styles.btn1}>
-            Next
-          </button>
+          <h3 className={styles.title}>Please Select Service</h3>
+          <div className={styles.service_container}>
+            <div className={styles.service_wrapper}>
+              {services.map((service) => (
+                <ServiceCard
+                  service={service}
+                  key={service._id}
+                  onSelectService={setSelectedService}
+                />
+              ))}
+            </div>
+            <button onClick={handleSelectService} className={styles.btn1}>
+              Next
+            </button>
           </div>
         </>
       )}
@@ -108,14 +107,21 @@ const Booking = () => {
               marginTop: "2%",
             }}
           >
-            <button onClick={() => setCurrentStep(0)} className={styles.btn1} style={{width:"100%"}}>
+            <button
+              onClick={() => setCurrentStep(0)}
+              className={styles.btn1}
+              style={{ width: "100%" }}
+            >
               Back
             </button>
-            <button onClick={handleSelectTimeSlot} className={styles.btn1} style={{width:"100%"}}>
+            <button
+              onClick={handleSelectTimeSlot}
+              className={styles.btn1}
+              style={{ width: "100%" }}
+            >
               Next
             </button>
           </div>
-          
         </>
       )}
 

@@ -16,7 +16,7 @@ const Product = () => {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:3000/api/products/${id}`
+          `https://next-barbershop.vercel.app//api/products/${id}`
         );
         setSelected(data);
       } catch (err) {
@@ -32,31 +32,27 @@ const Product = () => {
 
   return (
     <div className={styles.container}>
-      
-        <div className={styles.left}>
-          
-            
-          <div className={styles.imgContainer} onClick={toggleModal}>
-          <img src={selected.img} className={styles.img} alt=""/>
-          </div>
+      <div className={styles.left}>
+        <div className={styles.imgContainer} onClick={toggleModal}>
+          <img src={selected.img} className={styles.img} alt="" />
         </div>
-      
-      <div className={styles.right}>
-        
-          <h1 className={styles.title}>{selected.productName}</h1>
-          <span className={styles.price}>${selected.price}</span>
-          <p className={styles.desc}>{selected.description}</p>
-          <Link href="/shop">
-          <button className={styles.btn1}>
-              Back
-            </button>
-            </Link>
       </div>
-      
+
+      <div className={styles.right}>
+        <h1 className={styles.title}>{selected.productName}</h1>
+        <span className={styles.price}>${selected.price}</span>
+        <p className={styles.desc}>{selected.description}</p>
+        <Link href="/shop">
+          <button className={styles.btn1}>Back</button>
+        </Link>
+      </div>
+
       {showModal && (
         <div className={styles.modal}>
-          <Image src={selected.img} alt="" width="800" height="800"/>
-          <button onClick={toggleModal} className={styles.close}>X</button>
+          <Image src={selected.img} alt="" width="800" height="800" />
+          <button onClick={toggleModal} className={styles.close}>
+            X
+          </button>
         </div>
       )}
     </div>
@@ -64,4 +60,3 @@ const Product = () => {
 };
 
 export default Product;
-

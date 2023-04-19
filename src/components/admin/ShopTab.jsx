@@ -33,7 +33,10 @@ const ShopTab = () => {
       };
       console.log(_product);
 
-      await axios.post("http://localhost:3000/api/products", _product);
+      await axios.post(
+        "https://next-barbershop.vercel.app//api/products",
+        _product
+      );
       // setClose(true);
       setMsg(true);
     } catch (err) {
@@ -43,7 +46,9 @@ const ShopTab = () => {
 
   const fetchProducts = async () => {
     try {
-      const { data } = await axios.get("http://localhost:3000/api/products");
+      const { data } = await axios.get(
+        "https://next-barbershop.vercel.app//api/products"
+      );
       setProducts(data);
     } catch (err) {
       console.log(err);
@@ -54,13 +59,15 @@ const ShopTab = () => {
     fetchProducts();
   }, [products]);
 
-  const handleDelete = async (id) =>{
+  const handleDelete = async (id) => {
     //popup to confirm delete function
   };
 
   const handleClickDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/products/${id}`);
+      await axios.delete(
+        `https://next-barbershop.vercel.app//api/products/${id}`
+      );
     } catch (err) {
       console.log(err);
     }
@@ -84,7 +91,7 @@ const ShopTab = () => {
         description,
       };
       await axios.put(
-        `http://localhost:3000/api/products/${selectedProductId}`,
+        `https://next-barbershop.vercel.app//api/products/${selectedProductId}`,
         _product
       );
       setIsEditMode(false);
@@ -123,7 +130,7 @@ const ShopTab = () => {
             )}
 
             <p className={styles.p}>
-            {isEditMode ? (
+              {isEditMode ? (
                 ""
               ) : (
                 <label className={styles.label}>Choose an image</label>
@@ -187,7 +194,6 @@ const ShopTab = () => {
             </button>
           </div>
         </div>
-        
       </div>
       <br></br>
       <div className={styles.right}>

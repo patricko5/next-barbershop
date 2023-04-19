@@ -33,7 +33,10 @@ const ServicesTab = () => {
         img: url,
       };
 
-      await axios.post("http://localhost:3000/api/services", newServices);
+      await axios.post(
+        "https://next-barbershop.vercel.app//api/services",
+        newServices
+      );
       setImages([...images, { img: url }]);
       setMsg(true);
     } catch (err) {
@@ -45,7 +48,9 @@ const ServicesTab = () => {
 
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/services/${id}`);
+      await axios.delete(
+        `https://next-barbershop.vercel.app//api/services/${id}`
+      );
       setImages(images.filter((image) => image._id !== id));
     } catch (err) {
       console.log(err);
@@ -54,7 +59,9 @@ const ServicesTab = () => {
 
   const fetchImages = async () => {
     try {
-      const { data } = await axios.get("http://localhost:3000/api/services");
+      const { data } = await axios.get(
+        "https://next-barbershop.vercel.app//api/services"
+      );
       setImages(data);
     } catch (err) {
       console.log(err);
@@ -74,7 +81,7 @@ const ServicesTab = () => {
         description: serviceDescription,
       };
       await axios.put(
-        `http://localhost:3000/api/services/${selectedServiceId}`,
+        `https://next-barbershop.vercel.app//api/services/${selectedServiceId}`,
         _service
       );
       fetchImages();
@@ -97,41 +104,40 @@ const ServicesTab = () => {
       <h1 className={styles.servicesTitle}>Manage Services</h1>
       <div className={styles.uploadBox}>
         <div className={styles.uploadContainer}>
-        <h4 className={styles.addTitle}>Add a service</h4>
-            <label>Choose an image</label>
-            <div className={styles.fileInput}>
-              <input
-                type="file"
-                onChange={(e) => setFile(e.target.files[0])}
-                // onClick={() => setMsg(false)}
-                className="inputFile"
-              />
-            </div>
+          <h4 className={styles.addTitle}>Add a service</h4>
+          <label>Choose an image</label>
+          <div className={styles.fileInput}>
+            <input
+              type="file"
+              onChange={(e) => setFile(e.target.files[0])}
+              // onClick={() => setMsg(false)}
+              className="inputFile"
+            />
+          </div>
           <label>Service name: </label>
-                <input
-                  // value={serviceName}
-                  type="text"
-                  onChange={(e) => setServiceName(e.target.value)}
-                />
-                <label>Price:</label>
-                <input
-                  // value={servicePrice}
-                  type="number"
-                  onChange={(e) => setServicePrice(e.target.value)}
-                />
-                <label>Description: </label>
-                <textarea
-                  // value={serviceDescription}
-                  onChange={(e) => setServiceDescription(e.target.value)}
-                  placeholder="Description here..."
-                  rows="5" cols="40"
-                />
-           <button onClick={handleCreate} className={styles.uploadButton}>
+          <input
+            // value={serviceName}
+            type="text"
+            onChange={(e) => setServiceName(e.target.value)}
+          />
+          <label>Price:</label>
+          <input
+            // value={servicePrice}
+            type="number"
+            onChange={(e) => setServicePrice(e.target.value)}
+          />
+          <label>Description: </label>
+          <textarea
+            // value={serviceDescription}
+            onChange={(e) => setServiceDescription(e.target.value)}
+            placeholder="Description here..."
+            rows="5"
+            cols="40"
+          />
+          <button onClick={handleCreate} className={styles.uploadButton}>
             Upload
           </button>
-     {msg && (
-                  <h4>The image has been successfully uploaded.</h4>
-                )}
+          {msg && <h4>The image has been successfully uploaded.</h4>}
         </div>
       </div>
       <h1 className={styles.currentServices}>Current Services</h1>
@@ -186,7 +192,8 @@ const ServicesTab = () => {
                   value={serviceDescription}
                   onChange={(e) => setServiceDescription(e.target.value)}
                   placeholder="Description here..."
-                  rows="5" cols="40"
+                  rows="5"
+                  cols="40"
                 />
                 <br></br>
                 <button onClick={updateButton}>Edit</button>

@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import UserForm from "./UserForm";
 import styles from "/styles/booking/BookingCard.module.css";
 import axios from "axios";
@@ -11,7 +11,7 @@ const BookingCard = ({
   selectedService,
   selectedStaff,
   selectedStaffId,
-  handlePrevStep
+  handlePrevStep,
 }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,7 +21,7 @@ const BookingCard = ({
 
   const handlePrevStep1 = () => {
     handlePrevStep();
-    }
+  };
 
   const router = useRouter();
 
@@ -56,9 +56,8 @@ const BookingCard = ({
     };
 
     try {
-
       await axios.post(
-        "http://localhost:3000/api/booking/",
+        "https://next-barbershop.vercel.app//api/booking/",
         bookingData
       );
 
@@ -71,7 +70,6 @@ const BookingCard = ({
           startTime,
           endTime,
           serviceName: selectedService.serviceName,
-          
         },
       });
     } catch (error) {
@@ -100,16 +98,14 @@ const BookingCard = ({
             />
           </div>
 
-
           <div className={styles.buttonCont}>
-          <button className={styles.submit_button} onClick={handlePrevStep1}>
-            Back
-          </button>
-          <button className={styles.submit_button} type="submit">
-            Submit
-          </button>
+            <button className={styles.submit_button} onClick={handlePrevStep1}>
+              Back
+            </button>
+            <button className={styles.submit_button} type="submit">
+              Submit
+            </button>
           </div>
-
         </form>
       </div>
 

@@ -3,8 +3,7 @@ import CalendarView from "./CalendarView";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-
-const Dashboard = ({ staffId,staffName }) => {
+const Dashboard = ({ staffId, staffName }) => {
   const [errorMess, setErrorMessage] = useState("");
   const [error, setError] = useState(false);
   const [bookings, setBookings] = useState([]);
@@ -13,7 +12,7 @@ const Dashboard = ({ staffId,staffName }) => {
     const getBookings = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/schedule/details/${staffId}`
+          `https://next-barbershop.vercel.app//api/schedule/details/${staffId}`
         );
 
         const bookingsWithServiceNames = await Promise.all(
@@ -42,7 +41,7 @@ const Dashboard = ({ staffId,staffName }) => {
   const getService = async (serviceId) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/services/${serviceId}`
+        `https://next-barbershop.vercel.app//api/services/${serviceId}`
       );
       return response.data;
     } catch (error) {

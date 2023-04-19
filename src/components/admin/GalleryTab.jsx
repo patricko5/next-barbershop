@@ -24,7 +24,10 @@ const GalleryTab = () => {
       const newGallery = {
         img: url,
       };
-      await axios.post("http://localhost:3000/api/gallery", newGallery);
+      await axios.post(
+        "https://next-barbershop.vercel.app//api/gallery",
+        newGallery
+      );
       setMsg(true);
       setLoading(false); // set loading state to false when upload process is complete
       //setFile(null);
@@ -35,7 +38,9 @@ const GalleryTab = () => {
 
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/gallery/${id}`);
+      await axios.delete(
+        `https://next-barbershop.vercel.app//api/gallery/${id}`
+      );
       setImages(images.filter((image) => image._id !== id));
     } catch (err) {
       console.log(err);
@@ -45,7 +50,9 @@ const GalleryTab = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/api/gallery");
+        const { data } = await axios.get(
+          "https://next-barbershop.vercel.app//api/gallery"
+        );
         setImages(data);
       } catch (err) {
         console.log(err);

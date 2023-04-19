@@ -28,7 +28,7 @@ const PersonalInformation = ({ selectedStaff, onUpdate }) => {
 
       try {
         const { data } = await axios.get(
-          `http://localhost:3000/api/account/${selectedStaff?.account}`
+          `https://next-barbershop.vercel.app//api/account/${selectedStaff?.account}`
         ); // pass id as a parameter in the URL
         setExtraStaff(data);
       } catch (error) {
@@ -68,11 +68,11 @@ const PersonalInformation = ({ selectedStaff, onUpdate }) => {
 
     try {
       await axios.put(
-        `http://localhost:3000/api/staff/${selectedStaff._id}`,
+        `https://next-barbershop.vercel.app//api/staff/${selectedStaff._id}`,
         _staff
       );
       await axios.put(
-        `http://localhost:3000/api/account/${selectedStaff.account}`,
+        `https://next-barbershop.vercel.app//api/account/${selectedStaff.account}`,
         _extraStaff
       );
       const updatedStaff = { ...selectedStaff, ..._staff }; // UPDATED: include extraStaff properties
@@ -101,7 +101,7 @@ const PersonalInformation = ({ selectedStaff, onUpdate }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/staff/${selectedStaff._id}`,
+        `https://next-barbershop.vercel.app//api/staff/${selectedStaff._id}`,
         _staff
       );
       console.log(response.data);
@@ -129,7 +129,7 @@ const PersonalInformation = ({ selectedStaff, onUpdate }) => {
 
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/account/${selectedStaff.account}`
+        `https://next-barbershop.vercel.app//api/account/${selectedStaff.account}`
       );
       console.log(response.data);
       //window.location.reload();
@@ -150,7 +150,7 @@ const PersonalInformation = ({ selectedStaff, onUpdate }) => {
 
     try {
       await axios.put(
-        `http://localhost:3000/api/account/${selectedStaff.account}`,
+        `https://next-barbershop.vercel.app//api/account/${selectedStaff.account}`,
         _img
       );
       alert("Picture successfully deleted");
@@ -181,7 +181,7 @@ const PersonalInformation = ({ selectedStaff, onUpdate }) => {
         img: url,
       };
       const updateRes = await axios.put(
-        `http://localhost:3000/api/account/${selectedStaff.account}`,
+        `https://next-barbershop.vercel.app//api/account/${selectedStaff.account}`,
         newPicture
       );
       console.log("New updated picture: ", updateRes.data);

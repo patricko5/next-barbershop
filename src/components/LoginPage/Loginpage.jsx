@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "../../../styles/LoginPage.module.css";
 import { useRouter } from "next/router";
@@ -38,7 +38,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        "https://next-barbershop.vercel.app//api/auth/login",
         { username, password }
       );
 
@@ -64,58 +64,53 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.overlay}>
-      <div className={`${styles.wrapper} ${loaded ? styles.loaded : ''}`}>
-        <h2
-        >
-          Staff Login
-        </h2>
+        <div className={`${styles.wrapper} ${loaded ? styles.loaded : ""}`}>
+          <h2>Staff Login</h2>
 
-        <div className="form-floating mb-3 mt-3">
-          <input
-            className="form-control"
-            type="text"
-            id="email"
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Username"
-            style={{ backgroundColor: "#EBECF0" }}
-          />
-          <label htmlFor="email" className={styles.stuff}>
-            Username
-          </label>
-        </div>
-
-        <div className="form-floating mt-3 mb-3">
-          <input
-            className="form-control"
-            type="password"
-            id="pwd"
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            style={{ backgroundColor: "#EBECF0" }}
-          />
-          <label htmlFor="pwd" className={styles.stuff}>
-            Password
-          </label>
-        </div>
-
-        {error && (
-          <div
-            className="error-message"
-            style={{ "text-align": "center", color: "red" }}
-          >
-            {errorMess}
+          <div className="form-floating mb-3 mt-3">
+            <input
+              className="form-control"
+              type="text"
+              id="email"
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
+              style={{ backgroundColor: "#EBECF0" }}
+            />
+            <label htmlFor="email" className={styles.stuff}>
+              Username
+            </label>
           </div>
-        )}
 
-        <div>
-          <button className={styles.button} onClick={handleSubmit}>
-            Login
-          </button>
-          <br />
+          <div className="form-floating mt-3 mb-3">
+            <input
+              className="form-control"
+              type="password"
+              id="pwd"
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              style={{ backgroundColor: "#EBECF0" }}
+            />
+            <label htmlFor="pwd" className={styles.stuff}>
+              Password
+            </label>
+          </div>
 
-          
+          {error && (
+            <div
+              className="error-message"
+              style={{ "text-align": "center", color: "red" }}
+            >
+              {errorMess}
+            </div>
+          )}
+
+          <div>
+            <button className={styles.button} onClick={handleSubmit}>
+              Login
+            </button>
+            <br />
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

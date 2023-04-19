@@ -7,11 +7,12 @@ import Link from "next/link";
 const ServicesPage = () => {
   const [services, setServices] = useState([]);
 
-
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/api/services");
+        const { data } = await axios.get(
+          "https://next-barbershop.vercel.app//api/services"
+        );
         setServices(data);
       } catch (err) {
         console.log(err);
@@ -34,24 +35,24 @@ const ServicesPage = () => {
         {services.map((service) => (
           <div className={styles.imgContainer} key={service._id}>
             <Link href={`/service/${service._id}`} passHref>
-            <a>
-            <Image
-              src={service.img}
-              alt="Service img not found"
-              width="400"
-              height="400"
-            />
-            </a>
+              <a>
+                <Image
+                  src={service.img}
+                  alt="Service img not found"
+                  width="400"
+                  height="400"
+                />
+              </a>
             </Link>
             <div className={styles.serviceText}>
               <div className={styles.haircutTitle}>
-               <h2>{service.serviceName}</h2>
+                <h2>{service.serviceName}</h2>
               </div>
               {/* <div className={styles.haircutDescription}>
               {service.description}
               </div> */}
               <div className={styles.haircutPrice}>
-               <h5>&#36;{service.price}</h5>
+                <h5>&#36;{service.price}</h5>
               </div>
             </div>
           </div>

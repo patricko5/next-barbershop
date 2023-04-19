@@ -15,15 +15,17 @@ const BookingTab = () => {
     const fetchData = async () => {
       try {
         const bookingData = await axios.get(
-          "http://localhost:3000/api/booking"
+          "https://next-barbershop.vercel.app//api/booking"
         );
         setBookings(bookingData.data);
 
-        const barberData = await axios.get("http://localhost:3000/api/staff");
+        const barberData = await axios.get(
+          "https://next-barbershop.vercel.app//api/staff"
+        );
         setBarbers(barberData.data);
 
         const serviceData = await axios.get(
-          "http://localhost:3000/api/services"
+          "https://next-barbershop.vercel.app//api/services"
         );
         setServices(serviceData.data);
       } catch (error) {
@@ -35,7 +37,9 @@ const BookingTab = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/booking/${id}`);
+      await axios.delete(
+        `https://next-barbershop.vercel.app//api/booking/${id}`
+      );
       const newBookings = bookings.filter((booking) => booking._id !== id);
       setBookings(newBookings);
       setSuccess("Booking deleted successfully.");
