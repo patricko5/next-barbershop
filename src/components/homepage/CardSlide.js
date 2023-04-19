@@ -35,9 +35,9 @@ export default function CardSlide() {
           style={{ display: i === index ? "block" : "none" }}
         >
           <p>
-            <span className="quotationMark">"</span>
+            <span className="quotationMark">&quot;</span>
             {card}
-            <span className="quotationMark">"</span>
+            <span className="quotationMark">&quot;</span>
           </p>
 
           {names.map((name, i) => (
