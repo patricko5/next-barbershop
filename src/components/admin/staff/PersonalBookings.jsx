@@ -35,7 +35,7 @@ const PersonalBookings = ({ selectedStaff }) => {
   );
 
   return (
-    <div>
+    <div className={styles.container}>
       <table className={styles.table}>
         <thead>
           <tr>

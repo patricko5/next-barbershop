@@ -1,9 +1,11 @@
+.container {
+  overflow-y: scroll;
+}
 .table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
   color: white;
-
 }
 
 .table th,
@@ -17,5 +19,4 @@
   background-color: #ffffff;
   font-weight: bold;
   color: black;
-  
 }
