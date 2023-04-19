@@ -1,5 +1,5 @@
 import dbConnect from "../../../util/mongo";
-import Service from "../../../models/Service";
+import Service from "../../../models/service";
 
 const handler = async (req, res) => {
   const {

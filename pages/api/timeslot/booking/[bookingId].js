@@ -1,5 +1,5 @@
 import dbConnect from "../../../../util/mongo";
-import Booking from "../../../../models/Booking";
+import Booking from "../../../../models/booking";
 import Week from "../../../../models/Week";
 const { verifyTokenAndAdmin } = require("../../../../middlewares/verifyToken");
 import moment from "moment";

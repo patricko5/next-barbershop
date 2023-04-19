@@ -1,6 +1,6 @@
 import dbConnect from "../../../../util/mongo";
-import Schedule from "../../../../models/Schedule";
-import Booking from "../../../../models/Booking";
+import Schedule from "../../../../models/schedule";
+import Booking from "../../../../models/booking";
 
 const handler = async (req, res) => {
   const { method, query } = req;
