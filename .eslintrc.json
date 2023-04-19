@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next",
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "import/no-unresolved": "off",
+    "import/named": "off",
+    "import/default": "off",
+    "import/namespace": "off",
+    "import/no-restricted-paths": "off",
+    "import/no-absolute-path": "off",
+    "import/no-dynamic-require": "off",
+    "import/no-webpack-loader-syntax": "off",
+    "import/no-self-import": "off",
+    "import/no-cycle": "off"
+  }
 }
