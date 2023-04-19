@@ -1,0 +1,128 @@
+.container {
+    background-color: black;
+}
+
+.secondTitle{
+    color:white;
+    padding-top: 40px;
+}
+
+.productsContainer {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-evenly;
+    color: rgba(255, 255, 255, 0.756);
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.productContainer{
+    padding: 15px 15px;
+    margin: 10px 20px;
+    background-color: #212529;
+    border-radius: 25px;
+}
+
+.prodImg{
+    border-radius:25px;
+}
+
+.prodName{
+    font-size: 20px;
+}
+
+.prodPrice{
+    font-size: 18px;
+}
+
+.updateForm{
+    color: black;
+}
+
+/*Create Form*/
+.createForm{
+    display: flex;
+    color: rgba(255, 255, 255, 0.756);
+    background-color: #212529;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0px;
+    border: 1px solid rgb(0, 0, 0);
+    transition: 0.5s;
+    width: 40vw;
+    margin: auto;
+}
+
+.createForm:hover{
+    border-color: white;
+}
+
+.label{
+    display: table-cell;
+    padding-right: 10px;
+}
+
+.pageTitle{
+    color: rgb(255, 255, 255);
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: black;
+}
+
+.uploadButton, .deleteButton, .updateButton, .cancelButton{
+    width: 80px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: rgb(191, 191, 191);
+    color: black;
+    border: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.uploadButton{
+    float: right;
+    margin-right: 40px;
+    background-color: rgb(191, 191, 191);
+    color: black;
+}
+
+.cancelButton{
+    float: left;
+    color:black;
+}
+
+.deleteButton:hover, .uploadButton:hover, .updateButton:hover, .cancelButton:hover{
+    background-color: #7A7A7A;
+}
+
+.deleteButton{
+    margin-right: 10px;
+}
+
+.left{
+    flex: 1;
+}
+
+.right{
+    flex: 1;
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        width: 100%;
+    }
+
+    .title{
+        font-style: 30px;
+    }
+
+    .createForm{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}

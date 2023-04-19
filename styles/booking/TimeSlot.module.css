@@ -1,0 +1,137 @@
+.date_wrapper {
+
+    min-width: 25%;
+}
+
+.time_wrapper {
+    margin: 30px 10px 15px 30px;
+    padding-right: 14px;
+    
+}
+
+.barber_wrapper {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.time_button {
+    background-color: rgba(216, 238, 254, 0.94);
+    color: black;
+    font-size: 14px;
+    width: 15%;
+    padding: auto;
+    margin: 10px 10px 10px 10px;
+    border-radius: 2px;
+    border: none;
+}
+
+.time_button:disabled,
+.time_button[disabled] {
+    background-color: #e3cfcf;
+    color: black;
+    border: none;
+}
+
+.time_button:focus {
+    background-color: #b4efc4;
+    color: black;
+    border: none;
+}
+
+.staff_container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.radioL {
+    font-size: 1em;
+    
+}
+
+.radioL input {
+
+    margin-right: 0.3em;
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+
+
+.selectTimeWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.child2 {
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.radioButton {
+    display: none;
+}
+
+
+.buttonLabel {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.radioButton:checked+.buttonLabel {
+    background-color: #333;
+    color: #fff;
+    border-color: rgb(101, 184, 184);
+}
+.radioButton:hover+.buttonLabel {
+    background-color: #333;
+    color: #fff;
+    border-color: rgb(101, 184, 184);
+}
+
+.timesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1em
+}
+
+.isVisible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .radioButton:disabled +.buttonLabel {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .radioButton:disabled:hover +.buttonLabel {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transition: none;
+    background-color: #fff;
+    color: #333;
+  }
+  

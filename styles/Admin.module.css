@@ -1,0 +1,58 @@
+.container {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  /* background-color: black; */
+  background-color: rgb(22, 36, 50);
+  height: 100%;
+  /* height: calc(70px - 100vh); */
+  color: black;
+  display: flex;
+  flex-direction: row;
+}
+/* .tabMenu,
+.staffList,
+.record {
+  border: 1px solid #000000;
+} */
+/* .item {
+  border: 1px solid #000000;
+} */
+.item:first-child {
+  display: flex;
+  flex: 1;
+  /* background-color: rgb(255, 255, 255); */
+}
+.item:last-child {
+  display: flex;
+  flex: 8;
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+}
+/*
+.border {
+background-color: #212529;
+  border-radius: 25px;
+  margin: 30px 10px;  
+}
+*/
+.tabMenu {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.tabButtonContainer {
+  cursor: pointer;
+  width: 100%;
+}
+.tabButton {
+  padding: 15px 75px 15px 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.tabButton:hover {
+  background-color: rgba(0, 0, 0, 0.455);
+}

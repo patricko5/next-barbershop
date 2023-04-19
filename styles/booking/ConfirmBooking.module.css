@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10% 30% 10% 30%;
+    padding: 30px 10px;
+    background-color: rgba(33, 33, 33, 0.603);
+    border-radius: 20px;
+  }
+  
+  .booking_header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgba(25, 241, 169, 0.818);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-left: 9%;
+    margin-right: 10%;
+  
+  }
+  
+  .booking_details {
+    display: flex;
+    flex-direction: column;
+    color: rgb(180, 185, 185);
+    margin-left: 10%;
+    padding: 10px 5px 10px 0;
+  }
+  
+  .booking_message1 {
+    padding-top: 10px;
+    color: rgb(85, 136, 180);
+  
+  }
+  
+  .booking_message2 {
+    padding: 20px 10px 10px 0px;
+    font-size: 20px;
+    color: rgb(85, 136, 180);
+  
+  }

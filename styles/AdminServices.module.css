@@ -1,0 +1,246 @@
+.imagesContainer {
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1200px;
+  /* margin-left: 4px;
+  margin-right: 21px;
+  margin-bottom: 21px;
+  margin: auto; */
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: #212529;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.servName{
+  font-size: 20px;
+}
+
+.servPrice{
+  font-size: 18px;
+}
+
+.deleteButton {
+  position:relative;
+  bottom: 200px;
+  left: 167px;
+  width:fit-content;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.editButton {
+  position:relative;
+  bottom: 227px;
+  left: 1.5px;
+  width:fit-content;
+  border-radius: 8px;
+  background-color: rgb(191, 191, 191);
+  color: black;
+  border: none;
+  padding: 0px 10px;
+}
+
+.servicesContainer {
+  min-height: 10%;
+  width: 100%;
+  position: relative;
+  background-color: black;
+}
+
+/* .modal-content:target{
+ display: block;
+} */
+
+.formContainer {
+  max-width: 800px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #283345;
+  display: block;
+  position:fixed;
+  top: 50%; 
+  left: 25%; 
+  transform: translate(-50%, -50%);
+  padding: 50px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: black;
+  color: #f0f2f0;
+  padding: 20px;
+}
+
+.formContainer {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.formContainer label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="number"],
+.formContainer textarea {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.formContainer button {
+  background-color: #0077c0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.formContainer button.closeButton {
+  background-color: #ccc;
+  color: #000;
+  margin-left: 10px;
+}
+
+.formContainer button:hover {
+  background-color: #0060a3;
+}
+
+.formContainer h3 {
+  color: green;
+  margin-top: 10px;
+}
+
+.uploadContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #212529;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+}
+
+ .uploadBox {
+  border: 1px solid black;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+} 
+
+.uploadContainer label {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.uploadButton {
+  margin-top: 10px;
+    width: 80px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: rgb(191, 191, 191);
+    color: black;
+    border: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.overlay{
+  width: 200vw;
+  height: 100%;
+  background-color: rgba(65, 64, 64, 0.759);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(15px);
+}
+
+.fileInput {
+  position: relative;
+  width: 220px;
+  height: 40px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.servicesTitle{
+  color: rgb(255, 255, 255);
+  padding-top: 40px;
+
+  background-color: black;
+}
+
+.currentServices{
+  color: rgb(255, 255, 255);
+  padding-top: 40px;
+  margin-bottom: 0px;
+  background-color: black;
+}
+
+.addTitle{
+  color: rgb(255, 255, 255);
+}
+
+/* @media screen and (max-width: 480px){
+  .container{
+      height: auto;
+      text-align: center;
+      flex-direction: column;
+      margin-top: 20px;
+  }
+  .imgContainer{
+      width: 70vw;
+      height: 60vw;
+      padding: 0;
+  }
+  .title{
+      margin-bottom: 10px;
+      font-size: 30px;
+  }
+  .desc{
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  .price, .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .price{
+      font-size: 28px;
+  }
+
+} */
+

@@ -1,0 +1,174 @@
+.mainContainer {
+  width: 100%;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pageTitle{
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+}
+
+.imagesContainer {
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+
+
+
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 5px;
+  width: 20%;
+  margin: 8px;
+  background-color: #3c4047;
+
+  
+
+}
+
+.imgContainer:hover {
+  transform: scale(1.05);
+  transition: 0.1s transform;
+}
+
+.deleteButton {
+  position: relative;
+  bottom: 212px;
+  left: 87%;
+  width: fit-content;
+  border-radius: 8px;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.formContainer {
+  width: 500px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+  background-color:  #212529;
+  margin-bottom: 50px;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 50px;
+}
+
+.uploadButton {
+  /* border: 0.9px solid rgb(123, 122, 122);
+  border-radius: 2px; */
+    width: 80px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: rgb(191, 191, 191);
+    color: black;
+    border: none;
+    font-size: 13px;
+    transition: 0.2s;
+    float: right;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.uploadButton:hover {
+  background-color: rgb(234, 231, 231);
+}
+
+@media screen and (max-width: 375px) {
+
+  .mainContainer {
+    width: 100%;
+    background-color: black;
+  
+  }
+  
+  .imagesContainer {
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 200px;
+    width: 40%;
+    gap: 10px;
+  
+  
+  
+  }
+  
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    padding: 9px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 8px;
+    background-color: #3c4047;
+  
+    
+  
+  }
+  
+  .imgContainer:hover {
+    transform: scale(1.05);
+    transition: 0.1s transform;
+  
+    
+  
+  }
+  
+  .deleteButton {
+    position: relative;
+    bottom: 370px;
+    left: 87%;
+    width: fit-content;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    border: none;
+  }
+  
+  .formContainer {
+    width: 500px;
+    margin: 20px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+    background-color:  #212529;
+  
+  
+  }
+  
+  .uploadButton {
+    border: 0.9px solid rgb(123, 122, 122);
+    border-radius: 2px;
+  }
+  
+  .uploadButton:hover {
+    background-color: rgb(234, 231, 231);
+  }
+  
+}

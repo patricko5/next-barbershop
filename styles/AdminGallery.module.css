@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropzone {
+    border: 2px dashed #ccc;
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+.imageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.imageWrapper {
+    position: relative;
+    margin: 10px;
+}
+
+.deleteButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .imageWrapper {
+        width: 100%;
+    }
+}

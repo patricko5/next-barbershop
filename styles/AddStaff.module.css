@@ -1,0 +1,61 @@
+.container {
+  color: rgba(255, 255, 255, 0.756);
+  background-color: #212529;
+  display: flex;
+  margin-left: 30px;
+  border-radius: 15px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+.title {
+  margin-top: 20px;
+}
+.infoItem {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.infoLabel {
+  width: 200px;
+  margin-top: 10px;
+}
+
+.infoInput {
+  width: 400px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  /*margin-left: 500px; */
+}
+
+.actionButton {
+  width: 300px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  background-color: rgb(43, 43, 43);
+  color: rgba(255, 255, 255, 0.853);
+  border: none;
+  font-size: 16px;
+}
+
+.statusMessage {
+  margin: 20px 0px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: lime; 
+}
