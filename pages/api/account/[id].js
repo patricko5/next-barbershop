@@ -1,5 +1,5 @@
 import dbConnect from "../../../util/mongo";
-import Account from "../../../models/Account";
+import Account from "../../../models/account";
 import Staff from "../../../models/staff";
 import Schedule from "../../../models/Schedule";
 import Week from "../../../models/Week";

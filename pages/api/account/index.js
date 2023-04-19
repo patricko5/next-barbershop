@@ -1,5 +1,5 @@
 import dbConnect from "../../../util/mongo";
-import Account from "../../../models/Account";
+import Account from "../../../models/account";
 const {verifyTokenAndAdmin} = require("../../../middlewares/verifyToken")
 
 const handler = async (req, res) => {

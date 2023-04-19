@@ -1,5 +1,5 @@
 import dbConnect from "../../../util/mongo";
-import Account from "../../../models/Account";
+import Account from "../../../models/account";
 const { AccessToken } = require("../../../config/jwt.config");
 const CryptoJS = require("crypto-js");
 
