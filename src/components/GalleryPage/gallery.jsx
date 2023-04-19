@@ -10,7 +10,7 @@ function GalleryStuff() {
     const fetchImages = async () => {
       try {
         const { data } = await axios.get(
-          "https://next-barbershop.vercel.app//api/gallery"
+          "https://next-barbershop.vercel.app/api/gallery"
         );
         if (JSON.stringify(images) !== JSON.stringify(data)) {
           setImages(data);

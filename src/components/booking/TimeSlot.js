@@ -39,7 +39,7 @@ const TimeSlot = ({
     const getTimeSlotData = async () => {
       try {
         const res = await axios.get(
-          `https://next-barbershop.vercel.app//api/week/${selectedDate.toISOString()}`
+          `https://next-barbershop.vercel.app/api/week/${selectedDate.toISOString()}`
         );
         setTimeSlots(res.data);
       } catch (error) {
@@ -55,7 +55,7 @@ const TimeSlot = ({
     const getStaffAvailability = async (timeSlotId) => {
       try {
         const res = await axios.get(
-          `https://next-barbershop.vercel.app//api/timeslot/${timeSlotId}`
+          `https://next-barbershop.vercel.app/api/timeslot/${timeSlotId}`
         );
         //console.log("Received staff availability data:", res.data); // Add this line
         setStaffsAvailability(res.data);

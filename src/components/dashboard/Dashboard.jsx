@@ -12,7 +12,7 @@ const Dashboard = ({ staffId, staffName }) => {
     const getBookings = async () => {
       try {
         const response = await axios.get(
-          `https://next-barbershop.vercel.app//api/schedule/details/${staffId}`
+          `https://next-barbershop.vercel.app/api/schedule/details/${staffId}`
         );
 
         const bookingsWithServiceNames = await Promise.all(
@@ -41,7 +41,7 @@ const Dashboard = ({ staffId, staffName }) => {
   const getService = async (serviceId) => {
     try {
       const response = await axios.get(
-        `https://next-barbershop.vercel.app//api/services/${serviceId}`
+        `https://next-barbershop.vercel.app/api/services/${serviceId}`
       );
       return response.data;
     } catch (error) {

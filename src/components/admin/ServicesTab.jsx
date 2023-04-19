@@ -34,7 +34,7 @@ const ServicesTab = () => {
       };
 
       await axios.post(
-        "https://next-barbershop.vercel.app//api/services",
+        "https://next-barbershop.vercel.app/api/services",
         newServices
       );
       setImages([...images, { img: url }]);
@@ -49,7 +49,7 @@ const ServicesTab = () => {
   const handleRemove = async (id) => {
     try {
       await axios.delete(
-        `https://next-barbershop.vercel.app//api/services/${id}`
+        `https://next-barbershop.vercel.app/api/services/${id}`
       );
       setImages(images.filter((image) => image._id !== id));
     } catch (err) {
@@ -60,7 +60,7 @@ const ServicesTab = () => {
   const fetchImages = async () => {
     try {
       const { data } = await axios.get(
-        "https://next-barbershop.vercel.app//api/services"
+        "https://next-barbershop.vercel.app/api/services"
       );
       setImages(data);
     } catch (err) {
@@ -81,7 +81,7 @@ const ServicesTab = () => {
         description: serviceDescription,
       };
       await axios.put(
-        `https://next-barbershop.vercel.app//api/services/${selectedServiceId}`,
+        `https://next-barbershop.vercel.app/api/services/${selectedServiceId}`,
         _service
       );
       fetchImages();

@@ -11,7 +11,7 @@ const ServicesPage = () => {
     const fetchImages = async () => {
       try {
         const { data } = await axios.get(
-          "https://next-barbershop.vercel.app//api/services"
+          "https://next-barbershop.vercel.app/api/services"
         );
         setServices(data);
       } catch (err) {

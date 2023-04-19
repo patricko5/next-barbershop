@@ -38,7 +38,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://next-barbershop.vercel.app//api/auth/login",
+        "https://next-barbershop.vercel.app/api/auth/login",
         { username, password }
       );
 

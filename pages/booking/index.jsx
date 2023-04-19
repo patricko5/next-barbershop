@@ -23,7 +23,7 @@ const Booking = () => {
     const getServices = async () => {
       try {
         const res = await axios.get(
-          "https://next-barbershop.vercel.app//api/services/"
+          "https://next-barbershop.vercel.app/api/services/"
         );
         setServices(res.data);
       } catch (err) {

@@ -10,7 +10,7 @@ const ShopList = () => {
     const fetchProducts = async () => {
       try {
         const { data } = await axios.get(
-          "https://next-barbershop.vercel.app//api/products"
+          "https://next-barbershop.vercel.app/api/products"
         );
         setProductList(data);
       } catch (err) {

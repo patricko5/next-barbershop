@@ -21,7 +21,7 @@ function dashboard() {
     const getStaff = async (accountID) => {
       try {
         const response = await axios.get(
-          `https://next-barbershop.vercel.app//api/staff/account/${accountID}`
+          `https://next-barbershop.vercel.app/api/staff/account/${accountID}`
         );
         setStaffId(response.data._id);
         setStaffFullName(

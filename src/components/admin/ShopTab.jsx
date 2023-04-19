@@ -34,7 +34,7 @@ const ShopTab = () => {
       console.log(_product);
 
       await axios.post(
-        "https://next-barbershop.vercel.app//api/products",
+        "https://next-barbershop.vercel.app/api/products",
         _product
       );
       // setClose(true);
@@ -47,7 +47,7 @@ const ShopTab = () => {
   const fetchProducts = async () => {
     try {
       const { data } = await axios.get(
-        "https://next-barbershop.vercel.app//api/products"
+        "https://next-barbershop.vercel.app/api/products"
       );
       setProducts(data);
     } catch (err) {
@@ -66,7 +66,7 @@ const ShopTab = () => {
   const handleClickDelete = async (id) => {
     try {
       await axios.delete(
-        `https://next-barbershop.vercel.app//api/products/${id}`
+        `https://next-barbershop.vercel.app/api/products/${id}`
       );
     } catch (err) {
       console.log(err);
@@ -91,7 +91,7 @@ const ShopTab = () => {
         description,
       };
       await axios.put(
-        `https://next-barbershop.vercel.app//api/products/${selectedProductId}`,
+        `https://next-barbershop.vercel.app/api/products/${selectedProductId}`,
         _product
       );
       setIsEditMode(false);

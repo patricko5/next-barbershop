@@ -16,7 +16,7 @@ const Service = () => {
     const fetchService = async () => {
       try {
         const { data } = await axios.get(
-          `https://next-barbershop.vercel.app//api/services/${id}`
+          `https://next-barbershop.vercel.app/api/services/${id}`
         );
         setSelected(data);
       } catch (err) {

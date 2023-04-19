@@ -37,7 +37,7 @@ const AddStaff = () => {
       };
 
       await axios.post(
-        "https://next-barbershop.vercel.app//api/auth/register",
+        "https://next-barbershop.vercel.app/api/auth/register",
         newStaff
       );
       setStatusMessage("New staff member created successfully!");

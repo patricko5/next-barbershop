@@ -10,12 +10,12 @@ const PersonalBookings = ({ selectedStaff }) => {
     const fetchData = async () => {
       try {
         const bookingData = await axios.get(
-          "https://next-barbershop.vercel.app//api/booking"
+          "https://next-barbershop.vercel.app/api/booking"
         );
         setBookings(bookingData.data);
 
         const serviceData = await axios.get(
-          "https://next-barbershop.vercel.app//api/services"
+          "https://next-barbershop.vercel.app/api/services"
         );
         setServices(serviceData.data);
       } catch (error) {

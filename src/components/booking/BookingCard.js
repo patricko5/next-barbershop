@@ -57,7 +57,7 @@ const BookingCard = ({
 
     try {
       await axios.post(
-        "https://next-barbershop.vercel.app//api/booking/",
+        "https://next-barbershop.vercel.app/api/booking/",
         bookingData
       );
 

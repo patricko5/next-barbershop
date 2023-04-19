@@ -16,7 +16,7 @@ const Product = () => {
     const fetchProduct = async () => {
       try {
         const { data } = await axios.get(
-          `https://next-barbershop.vercel.app//api/products/${id}`
+          `https://next-barbershop.vercel.app/api/products/${id}`
         );
         setSelected(data);
       } catch (err) {

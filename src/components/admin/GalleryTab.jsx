@@ -25,7 +25,7 @@ const GalleryTab = () => {
         img: url,
       };
       await axios.post(
-        "https://next-barbershop.vercel.app//api/gallery",
+        "https://next-barbershop.vercel.app/api/gallery",
         newGallery
       );
       setMsg(true);
@@ -39,7 +39,7 @@ const GalleryTab = () => {
   const handleRemove = async (id) => {
     try {
       await axios.delete(
-        `https://next-barbershop.vercel.app//api/gallery/${id}`
+        `https://next-barbershop.vercel.app/api/gallery/${id}`
       );
       setImages(images.filter((image) => image._id !== id));
     } catch (err) {
@@ -51,7 +51,7 @@ const GalleryTab = () => {
     const fetchImages = async () => {
       try {
         const { data } = await axios.get(
-          "https://next-barbershop.vercel.app//api/gallery"
+          "https://next-barbershop.vercel.app/api/gallery"
         );
         setImages(data);
       } catch (err) {
