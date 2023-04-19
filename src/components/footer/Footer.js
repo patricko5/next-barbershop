@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import Link from "next/link";
 function Footer() {
@@ -17,6 +19,7 @@ function Footer() {
             </p>
 
             <div className="mt-4">
+              // eslint-disable-next-line react/jsx-no-target-blank
               <a
                 href="https://www.facebook.com/romantikobarbershop"
                 target="_blank"

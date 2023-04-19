@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+import React from "react";
 import Dashboard from "../../src/components/dashboard/Dashboard";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -35,8 +37,7 @@ function dashboard() {
 
   return (
     <div>
-      
-      <Dashboard staffId={staffId} staffName={staffFullName}/>;
+      <Dashboard staffId={staffId} staffName={staffFullName} />;
     </div>
   );
 }
