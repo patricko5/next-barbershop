@@ -1,7 +1,7 @@
 import dbConnect from "../../../util/mongo";
 import Booking from "../../../models/booking";
 import Week from "../../../models/Week";
-import Schedule from "../../../models/schedule";
+import Schedule from "../../../models/Schedule";
 import { checkAndUpdateIsFull } from "../../../config/staffAvailability.config";
 const { convertToHours } = require("../../../config/convertToHours.config");
 import moment from "moment";

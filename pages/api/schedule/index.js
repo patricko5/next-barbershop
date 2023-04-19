@@ -1,6 +1,6 @@
 import dbConnect from "../../../util/mongo";
-import Schedule from "../../../models/schedule";
-const {verifyTokenAndAdmin} = require("../../../middlewares/verifyToken")
+import Schedule from "../../../models/Schedule";
+const { verifyTokenAndAdmin } = require("../../../middlewares/verifyToken");
 
 const handler = async (req, res) => {
   const { method } = req;
@@ -15,12 +15,12 @@ const handler = async (req, res) => {
       res.status(500).json(err);
     }
   }
-
 };
 
 const handlerWrapper = (req, res) => {
   verifyTokenAndAdmin(req, res, () => {
     handler(req, res);
-  }) };
+  });
+};
 
 export default handlerWrapper;

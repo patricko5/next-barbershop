@@ -1,7 +1,7 @@
 import dbConnect from "../../../util/mongo";
 import Account from "../../../models/account";
 import Staff from "../../../models/staff";
-import Schedule from "../../../models/schedule";
+import Schedule from "../../../models/Schedule";
 import Week from "../../../models/Week";
 const { verifyTokenAndAdmin } = require("../../../middlewares/verifyToken");
 
@@ -41,7 +41,6 @@ const handler = async (req, res) => {
 
     case "DELETE":
       try {
-        
         const staff = await Staff.findOne({ account: id });
 
         // Remove staff availability from the time slots
