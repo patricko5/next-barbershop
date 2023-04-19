@@ -8,6 +8,7 @@ import { VscCalendar } from "react-icons/vsc";
 import { ImScissors } from "react-icons/im";
 import { TfiGallery } from "react-icons/Tfi";
 import { useEffect } from "react";
+import { Tfi } from 'react-icons/ti';
 
 const Index = ({ children }) => {
   const router = useRouter();
