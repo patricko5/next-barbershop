@@ -135,6 +135,7 @@ const PersonalInformation = ({ selectedStaff, onUpdate }) => {
       //window.location.reload();
 
       alert("Staff account successfully deleted.");
+      window.location.reload();
     } catch (err) {
       console.error("Error deleting account:", err);
     }
